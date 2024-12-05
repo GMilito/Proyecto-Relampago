@@ -1,0 +1,44 @@
+﻿@page
+@model SitioRelampago.Pages.AreasModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Áreas</title>
+</head>
+<body>
+    <div class="titulo">
+        <div>
+            <h1>Mantenimiento Áreas</h1>
+        </div> 
+    </div>
+    
+    <div>
+        <button class="btn btn-success btn-agregar">Agregar</button>
+    </div>
+
+
+    <table class="table table-striped table-hover" border="1">
+        <thead style="background-color: #254D72; color:white;">
+            <tr>
+                <th>ID Área</th>
+                <th>Nombre Área</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var area in Model.Areas)
+            {
+                <tr>
+                    <td>@area.IdArea</td>
+                    <td>@area.NombreArea</td>
+                    <td> <button class="btn" href="#"><img class="icono" src="~/images/tdesignedit.png" /></button></td>
+                    <td> <button class="btn" href="#"><img class="icono" src="~/images/bxtrash.png" /></button> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

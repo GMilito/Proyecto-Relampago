@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\SitioRelampago\\wwwroot\\images\\BxTrash.png",
+      "PackagePath": "staticwebassets\\images\\BxTrash.png"
+    },
+    {
+      "Id": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\SitioRelampago\\wwwroot\\images\\TdesignEdit.png",
+      "PackagePath": "staticwebassets\\images\\TdesignEdit.png"
+    },
+    {
+      "Id": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\SitioRelampago\\wwwroot\\images\\logoSitioRelampago.png",
+      "PackagePath": "staticwebassets\\images\\logoSitioRelampago.png"
+    },
+    {
       "Id": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\SitioRelampago\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

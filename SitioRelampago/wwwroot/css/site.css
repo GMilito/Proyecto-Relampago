@@ -19,4 +19,53 @@ html {
 
 body {
   margin-bottom: 60px;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.navbar {
+    background-color: #254D72;
+    color:white;
+    font-family:Righteous;
+}
+
+.nav-link{
+    color:white !important;
+}
+
+.dropdown-menu {
+    background-color: #254D72;
+    color:white;
+}
+
+.dropdown-item{
+    color:white;
+}
+
+.icono{
+    width:30px;
+    height:30px;
+}
+
+.titulo {
+    display:flex;
+    background-color:white;
+    text-align: center;
+    align-self:center;
+    margin-top:100px;
+    margin-bottom:50px;
+    justify-content:center;
+    align-items:center;
+}
+
+    .titulo h1 {
+        padding:10px 15px;
+        width:auto;
+        background-color: #24C18A;
+    }
+
+.btn-agregar {
+    margin-bottom: 40px;
 }

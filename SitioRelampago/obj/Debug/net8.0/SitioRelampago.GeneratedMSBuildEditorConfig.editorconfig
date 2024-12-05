@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\kenta\Source\Repos\Proyecto-Relampago\SitioRelampago
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/kenta/Source/Repos/Proyecto-Relampago/SitioRelampago/Pages/Areas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJlYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kenta/Source/Repos/Proyecto-Relampago/SitioRelampago/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kenta/Source/Repos/Proyecto-Relampago/SitioRelampago/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kenta/Source/Repos/Proyecto-Relampago/SitioRelampago/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kenta/Source/Repos/Proyecto-Relampago/SitioRelampago/Pages/Shared/_ValidationScriptsPartial.cshtml]

@@ -45,21 +45,8 @@ namespace DataAccess
 
             return areas;
         }
-        public void TestConnection()
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(_connectionString))
-                {
-                    connection.Open();
-                    Console.WriteLine("Conexión exitosa a la base de datos.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al conectar: {ex.Message}");
-            }
-        }
+        
+
 
     }
 }
