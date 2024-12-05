@@ -1,7 +1,14 @@
+using Microsoft.SqlServer.Server;
+
+using DataAccess;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<Conexion>();
+
 
 var app = builder.Build();
 
