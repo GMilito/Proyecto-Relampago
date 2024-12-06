@@ -15,7 +15,7 @@
     </div>
     
     <div>
-        <button class="btn btn-success btn-agregar">Agregar</button>
+        <button class="btn btn-success btn-agregar" data-bs-toggle="modal" data-bs-target="#addAreaModal">Agregar</button>
     </div>
 
 
@@ -34,11 +34,123 @@
                 <tr>
                     <td>@area.IdArea</td>
                     <td>@area.NombreArea</td>
-                    <td> <button class="btn" href="#"><img class="icono" src="~/images/tdesignedit.png" /></button></td>
-                    <td> <button class="btn" href="#"><img class="icono" src="~/images/bxtrash.png" /></button> </td>
+                    <td>
+                        <button class="btn-tabla" data-bs-toggle="modal" data-bs-target="#editAreaModal" data-id="@area.IdArea" data-nombre="@area.NombreArea">
+                            <img class="icono" src="~/images/tdesignedit.png" />
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn-tabla-eliminar" data-bs-toggle="modal" data-bs-target="#deleteAreaModal" data-id="@area.IdArea" data-nombre="@area.NombreArea">
+                            <img class="icono" src="~/images/bxtrash.png" />                 
+                        </button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
+
+    <!-- Modal Agregar Area -->
+    <div class="modal fade" id="addAreaModal" tabindex="-1" aria-labelledby="addAreaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAreaModalLabel">Agregar Área</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="idArea" class="form-label">ID del Área</label>
+                            <input type="number" class="form-control" id="idArea" name="idArea" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreArea" class="form-label">Nombre del Área</label>
+                            <input type="text" class="form-control" id="nombreArea" name="nombreArea" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para editar área -->
+    <div class="modal fade" id="editAreaModal" tabindex="-1" aria-labelledby="editAreaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAreaModalLabel">Editar Área</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" asp-page-handler="Edit">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="editIdArea" class="form-label">ID del Área</label>
+                            <input type="number" class="form-control" id="IdArea" name="IdArea" asp-for="IdArea" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNombreArea" class="form-label">Nombre del Área</label>
+                            <input type="text" class="form-control" id="NombreArea" name="NombreArea" asp-for="NombreArea" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para  eliminar Area -->
+    <div class="modal fade" id="deleteAreaModal" tabindex="-1" aria-labelledby="deleteAreaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteAreaModalLabel">Eliminar Área</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" asp-page-handler="Delete">
+                    <div class="modal-body">
+                        <p>¿Estás seguro de que deseas eliminar está área?</p>
+                        <input type="text" id="NombreAreaB" name="NombreAreaB" asp-for="NombreAreaB" readonly />
+                        <input type="text" id="IdAreaB" name="IdAreaB" asp-for="IdAreaB" readonly />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Mensajes de Error y Exito-->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+
+
+
+
+
+
+
+
 </body>
 </html>
+
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\kenta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

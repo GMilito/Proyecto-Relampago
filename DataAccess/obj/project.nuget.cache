@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6N2qWdSRwrg=",
+  "dgSpecHash": "iRbHT76iQYU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kenta\\Source\\Repos\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kenta\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\kenta\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

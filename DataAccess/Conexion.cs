@@ -45,8 +45,56 @@ namespace DataAccess
 
             return areas;
         }
-        
 
+        public void AddArea(Area area)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO area (idArea, nombreArea) VALUES (@idArea, @nombreArea)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idArea", area.IdArea);
+                    command.Parameters.AddWithValue("@nombreArea", area.NombreArea);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateArea(Area area)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "UPDATE area SET nombreArea = @nombreArea WHERE idArea = @idArea";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idArea", area.IdArea);
+                    command.Parameters.AddWithValue("@nombreArea", area.NombreArea);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public void DeleteArea(int idArea)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "DELETE FROM area WHERE idArea = @idArea";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idArea", idArea);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
     }
 }
