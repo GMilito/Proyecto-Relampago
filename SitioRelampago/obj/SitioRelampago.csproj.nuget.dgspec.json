@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\SitioRelampago\\SitioRelampago.csproj": {}
+    "C:\\ADM de sitios\\Proyecto Relampago\\1\\SitioRelampago\\SitioRelampago.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {
+    "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\kenta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\obj\\",
+        "projectPath": "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -75,24 +75,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\SitioRelampago\\SitioRelampago.csproj": {
+    "C:\\ADM de sitios\\Proyecto Relampago\\1\\SitioRelampago\\SitioRelampago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\SitioRelampago\\SitioRelampago.csproj",
+        "projectUniqueName": "C:\\ADM de sitios\\Proyecto Relampago\\1\\SitioRelampago\\SitioRelampago.csproj",
         "projectName": "SitioRelampago",
-        "projectPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\SitioRelampago\\SitioRelampago.csproj",
-        "packagesPath": "C:\\Users\\kenta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\SitioRelampago\\obj\\",
+        "projectPath": "C:\\ADM de sitios\\Proyecto Relampago\\1\\SitioRelampago\\SitioRelampago.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\ADM de sitios\\Proyecto Relampago\\1\\SitioRelampago\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,8 +108,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\kenta\\source\\repos\\gitHub\\Proyecto-Relampago\\DataAccess\\DataAccess.csproj"
+              "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\ADM de sitios\\Proyecto Relampago\\1\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -157,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

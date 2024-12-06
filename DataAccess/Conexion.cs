@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
@@ -17,6 +14,7 @@ namespace DataAccess
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
+        // Métodos para Áreas
         public List<Area> ObtenerAreas()
         {
             var areas = new List<Area>();
@@ -80,7 +78,6 @@ namespace DataAccess
             }
         }
 
-
         public void DeleteArea(int idArea)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -96,13 +93,96 @@ namespace DataAccess
             }
         }
 
+        // Métodos para Dependencias
+        public List<Dependencia> ObtenerDependencias()
+        {
+            var dependencias = new List<Dependencia>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT idDependencia, nombreDependencia FROM dependencia";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var dependencia = new Dependencia
+                            {
+                                IdDependencia = reader.GetInt32(0), // Índice basado en SELECT (idDependencia es la columna 0)
+                                NombreDependencia = reader.GetString(1) // nombreDependencia es la columna 1
+                            };
+                            dependencias.Add(dependencia);
+                        }
+                    }
+                }
+            }
+
+            return dependencias;
+        }
+
+        public void AddDependencia(Dependencia dependencia)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO dependencia (idDependencia, nombreDependencia) VALUES (@idDependencia, @nombreDependencia)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idDependencia", dependencia.IdDependencia);
+                    command.Parameters.AddWithValue("@nombreDependencia", dependencia.NombreDependencia);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateDependencia(Dependencia dependencia)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "UPDATE dependencia SET nombreDependencia = @nombreDependencia WHERE idDependencia = @idDependencia";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idDependencia", dependencia.IdDependencia);
+                    command.Parameters.AddWithValue("@nombreDependencia", dependencia.NombreDependencia);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void DeleteDependencia(int idDependencia)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = "DELETE FROM dependencia WHERE idDependencia = @idDependencia";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idDependencia", idDependencia);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
-}
 
+    // Clases auxiliares para las entidades
+    public class Area
+    {
+        public int IdArea { get; set; }
+        public string NombreArea { get; set; }
+    }
 
-
-public class Area
-{
-    public int IdArea { get; set; }
-    public string NombreArea { get; set; }
+    public class Dependencia
+    {
+        public int IdDependencia { get; set; }
+        public string NombreDependencia { get; set; }
+    }
 }

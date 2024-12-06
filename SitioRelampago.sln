@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SitioRelampago", "SitioRelampago\SitioRelampago.csproj", "{CB5F0BDE-D245-4A9E-AD2E-D5A4A9E11FCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{E938C2C7-52C4-4DFD-96FF-9191FE03292D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{E938C2C7-52C4-4DFD-96FF-9191FE03292D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

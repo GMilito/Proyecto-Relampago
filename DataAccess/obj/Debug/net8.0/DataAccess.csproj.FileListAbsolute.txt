@@ -24,3 +24,16 @@ C:\Users\kenta\source\repos\gitHub\Proyecto-Relampago\DataAccess\obj\Debug\net8.
 C:\Users\kenta\source\repos\gitHub\Proyecto-Relampago\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 C:\Users\kenta\source\repos\gitHub\Proyecto-Relampago\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\Users\kenta\source\repos\gitHub\Proyecto-Relampago\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\ADM de sitios\Proyecto Relampago\1\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

@@ -390,7 +390,10 @@
           "Microsoft.Extensions.Configuration": "9.0.0"
         },
         "runtime": {
-          "DataAccess.dll": {}
+          "DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

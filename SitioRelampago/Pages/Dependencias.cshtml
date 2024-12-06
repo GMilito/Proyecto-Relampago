@@ -1,0 +1,139 @@
+﻿@page
+@model SitioRelampago.Pages.DependenciasModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependencias</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Mantenimiento de Dependencias</h1>
+    </div>
+
+    <div>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addDependenciaModal">Agregar</button>
+    </div>
+
+    <table class="table table-striped table-hover" border="1">
+        <thead style="background-color: #254D72; color:white;">
+            <tr>
+                <th>ID Dependencia</th>
+                <th>Nombre Dependencia</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dependencia in Model.Dependencias)
+            {
+                <tr>
+                    <td>@dependencia.IdDependencia</td>
+                    <td>@dependencia.NombreDependencia</td>
+                    <td>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#editDependenciaModal"
+                                onclick="loadEditDependencia('@dependencia.IdDependencia', '@dependencia.NombreDependencia')">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteDependenciaModal"
+                                onclick="loadDeleteDependencia('@dependencia.IdDependencia', '@dependencia.NombreDependencia')">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Modal Agregar Dependencia -->
+    <div class="modal fade" id="addDependenciaModal" tabindex="-1" aria-labelledby="addDependenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addDependenciaModalLabel">Agregar Dependencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="idDependencia" class="form-label">ID Dependencia</label>
+                            <input type="number" class="form-control" id="idDependencia" name="IdDependencia" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreDependencia" class="form-label">Nombre Dependencia</label>
+                            <input type="text" class="form-control" id="nombreDependencia" name="NombreDependencia" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Editar Dependencia -->
+    <div class="modal fade" id="editDependenciaModal" tabindex="-1" aria-labelledby="editDependenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post" asp-page-handler="Edit">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editDependenciaModalLabel">Editar Dependencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="editIdDependencia" name="IdDependencia" required>
+                        <div class="mb-3">
+                            <label for="editNombreDependencia" class="form-label">Nombre Dependencia</label>
+                            <input type="text" class="form-control" id="editNombreDependencia" name="NombreDependencia" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar Dependencia -->
+    <div class="modal fade" id="deleteDependenciaModal" tabindex="-1" aria-labelledby="deleteDependenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post" asp-page-handler="Delete">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteDependenciaModalLabel">Eliminar Dependencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Está seguro de eliminar esta dependencia?</p>
+                        <input type="hidden" id="deleteIdDependencia" name="IdDependenciaB" required>
+                        <input type="text" class="form-control" id="deleteNombreDependencia" name="NombreDependenciaB" readonly>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function loadEditDependencia(id, nombre) {
+            document.getElementById('editIdDependencia').value = id;
+            document.getElementById('editNombreDependencia').value = nombre;
+        }
+
+        function loadDeleteDependencia(id, nombre) {
+            document.getElementById('deleteIdDependencia').value = id;
+            document.getElementById('deleteNombreDependencia').value = nombre;
+        }
+    </script>
+</body>
+</html>
